@@ -6,8 +6,9 @@ namespace MathCalculatorTests
             return a+b;
         }
 
-        // subtract
-        // Multiply
-        // Division
+        public int Sub(int a, int b)
+        {
+            return a - b;
+        }
     }
 }
