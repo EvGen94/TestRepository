@@ -2,7 +2,7 @@
 
 namespace MathCalculator
 {
-    public class Class1
+    public class MathCalculator
     {
     }
 }
