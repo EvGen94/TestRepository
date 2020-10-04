@@ -33,5 +33,31 @@ namespace MathCalculatorTests
             // Assert
             Assert.Equal(2, result);
         }
+
+        [Fact]
+        public void WhenSumMuniusFiveAndThreeThenGotMuniusTwo()
+        {
+            // Arrange(Подготовка данных)
+            MathCalculator calculator = new MathCalculator();
+
+            // Act
+            int results = calculator.Sum(-Five, Three);
+
+            // Assert
+            Assert.Equal(-Five + Three, results);
+        }
+
+        [Fact]
+        public void WhenNegSubFiveAndThreeThaenGotEight()
+        {
+            // Arrange
+            MathCalculator calculator = new MathCalculator();
+
+            // Act
+            var result = calculator.Sub(-Five,Three);
+
+            // Assert
+            Assert.Equal(-8, result);
+        }
     }
 }
