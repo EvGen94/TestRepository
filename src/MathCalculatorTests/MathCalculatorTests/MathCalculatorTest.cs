@@ -61,12 +61,10 @@ namespace MathCalculatorTests
         }
 
         [Fact]
-        public void UnitTwoStrings(){
+        public void Overload(){
             MathCalculator calculator = new MathCalculator();
 
-            var result = calculator.UnitStrings("Haha", "tests");
-
-            Assert.Equal("Hahatests", result);
+            var result = calculator.Sum("Haha", "tests");
         }
     }
 }
