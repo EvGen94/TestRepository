@@ -16,5 +16,9 @@ namespace MathCalculatorTests
         {
             return a - b;
         }
+
+        public string UnitStrings(string a, string b){
+            return a + b;
+        }
     }
 }
