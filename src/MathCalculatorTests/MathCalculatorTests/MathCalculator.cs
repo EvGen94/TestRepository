@@ -7,7 +7,7 @@ namespace MathCalculatorTests
         }
 
         public int Sum(string a, string b){
-            return a+b;
+            return int.Parse(a) + int.Parse(b);
         }
 
         public int Sub(int a, int b)
