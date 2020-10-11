@@ -11,5 +11,10 @@ namespace MathCalculatorTests
         {
             return a - b;
         }
+
+        public int Sum(string a, string b)
+        {   
+            return Convert.ToInt32(a) + Convert.ToInt32(b); 
+        }
     }
 }
