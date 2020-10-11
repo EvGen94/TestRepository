@@ -59,5 +59,15 @@ namespace MathCalculatorTests
             // Assert
             Assert.Equal(-8, result);
         }
+
+        [Fact]
+
+        public void WhenSubEightAndFiveGotThree(){
+            MathCalculator calculator = new MathCalculator();
+
+            double result = calculator.Sub(8, Five);
+
+            Assert.Equal(3, result); 
+        }
     }
 }
