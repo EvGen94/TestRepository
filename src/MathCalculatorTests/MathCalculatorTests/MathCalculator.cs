@@ -21,5 +21,9 @@ namespace MathCalculatorTests
         {   
             return Convert.ToInt32(a) + Convert.ToInt32(b); 
         }
+
+        public string UnitStrings(string a, string b){
+            return a + b;
+        }
     }
 }
