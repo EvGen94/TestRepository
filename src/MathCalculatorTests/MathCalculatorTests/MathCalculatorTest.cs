@@ -59,5 +59,14 @@ namespace MathCalculatorTests
             // Assert
             Assert.Equal(-8, result);
         }
+
+        [Fact]
+        public void UnitTwoStrings(){
+            MathCalculator calculator = new MathCalculator();
+
+            var result = calculator.UnitStrings("Haha", "tests");
+
+            Assert.Equal("Hahatests", result);
+        }
     }
 }
