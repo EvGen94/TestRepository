@@ -1,14 +1,15 @@
 using System;
 using Xunit;
+using RockScissorsPaperLib;
 
 namespace RockScissorsPaperTests
 {
-    public class UnitTest1
+    public class WinnerCheakerTests
     {
         [Fact]
         public void Test1()
         {
-
+            WinnerCheaker winnerCheaker = new WinnerCheaker();
         }
     }
 }
