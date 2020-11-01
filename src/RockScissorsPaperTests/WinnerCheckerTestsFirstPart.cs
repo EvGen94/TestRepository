@@ -8,16 +8,37 @@ namespace RockScissorsPaperTests
     public class WinnerCheckerTestsSimple
     {
         [Fact]
-        public void RockBeatenByPaper()
+        public void CallsTests()
+        {
+            CheckTest(Variants.Rock, Variants.Paper, WinResult.Player2Win);
+        }
+
+        public void CheckTest(Variants player1, Variants player2, WinResult expectedResult)
         {
             // Arrange
             IWinnerChecker winnerChecker = new DefaultChecker();
             
             // Act
-            var result = winnerChecker.Check(Variants.Rock, Variants.Paper);
+            var result = winnerChecker.Check(player1, player2);
 
             // Assert
-            Assert.Equal(WinResult.Player2Win, result);   
+            Assert.Equal(expectedResult, result);  
+        }
+
+        [Theory]
+        [InlineData(Variants.Rock, Variants.Paper, WinResult.Player2Win)]
+        [InlineData(Variants.Rock, Variants.Scissors, WinResult.Player1Win)]
+        [InlineData(Variants.Rock, Variants.Rock, WinResult.Draw)]
+        public void CheckTestTheory(Variants player1, Variants player2, WinResult expectedResult)
+        {
+            // Arrange
+            IWinnerChecker winnerChecker = new DefaultChecker();
+            
+            // Act
+            var result = winnerChecker.Check(player1, player2);
+
+            // Assert
+            Assert.Equal(expectedResult, result);  
         }
     }
 }
